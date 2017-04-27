@@ -70,7 +70,7 @@ export class ChatList {
     $messageRow.append($message);
     //$(this.listId).append($messageRow);
     //adds one messagerow to the form selector $list => [data-chat="chat-form"]
-    $(this.$list).append($messageRow);
+    this.$list.append($messageRow);
     //adds the message row into the scroll view
     $messageRow.get(0).scrollIntoView();
   }

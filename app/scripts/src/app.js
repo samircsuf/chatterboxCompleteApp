@@ -26,8 +26,8 @@ class ChatApp {
       //let message = new ChatMessage({ message: 'pow!' });
       //socket.sendMessage(message.serialize());
       //msg transmission via chatForm
-      this.chatForm.init((data) => {
-        let message = new ChatMessage(data);
+      this.chatForm.init((text) => {
+        let message = new ChatMessage({message: text});
         socket.sendMessage(message.serialize());
       });
       this.chatList.init();
@@ -39,6 +39,7 @@ class ChatApp {
       this.chatList.drawMessage(message.serialize());//draws the serialize message into browser
     });
   }
+
 }
 //class with default and optional values
 class ChatMessage {
